@@ -5,7 +5,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 class _HomePageState extends State<HomePage> {
-  var num1=0,num2=0,sum=0;
+  var num1=0,num2=3,sum=2;
   TextEditingController t1 = TextEditingController();
   TextEditingController t2 = TextEditingController();
   void doAdd(){
@@ -47,7 +47,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+     // resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         title: Text(
             "Calculator"
@@ -97,16 +97,16 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                RaisedButton(
-                    color: Colors.deepOrange,
+                ElevatedButton(
+
                     onPressed:(){
                       doAdd();
                     },
                     child:Text("+")
                 ),
                 Container(width: 15.0,),
-                RaisedButton(
-                    color: Colors.greenAccent,
+                ElevatedButton(
+
                     onPressed:(){
                       doSub();
                     },
@@ -117,20 +117,20 @@ class _HomePageState extends State<HomePage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                RaisedButton(
-                    shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20.0),
-                        side: BorderSide(color: Colors.deepPurple)
-                    ),
-                    color: Colors.white,
+                ElevatedButton(
+                    // shape: RoundedRectangleBorder(
+                    //     borderRadius: BorderRadius.circular(20.0),
+                    //     side: BorderSide(color: Colors.deepPurple)
+                    // ),
+
                     onPressed:(){
                       doMul();
                     },
                     child:Text("*")
                 ),
                 Container(width: 15.0,),
-                RaisedButton(
-                    color: Colors.blue,
+                ElevatedButton(
+
                     onPressed:(){
                       doDiv();
                     },
@@ -138,7 +138,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            RaisedButton(
+            ElevatedButton(
               onPressed:(){
                 clear();
               },
